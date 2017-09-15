@@ -25,6 +25,7 @@ namespace TTCDictionary
         {
             string wordAlreadyInserted = string.Empty;
 
+            //If language is not null and the language already exists, check if the given word is the same than the existing one
             if (!string.IsNullOrEmpty(language) && list.TryGetValue(language, out wordAlreadyInserted))
             {
                 return wordAlreadyInserted.Equals(word);
@@ -41,6 +42,7 @@ namespace TTCDictionary
         /// <returns>True if the language and word were successfully added</returns>
         public bool Add(string language, string word)
         {
+            //If word is null or the language already exists, returns false
             if (string.IsNullOrEmpty(language) || list.Any(i => i.Key.Equals(language)))
             {
                 return false;
