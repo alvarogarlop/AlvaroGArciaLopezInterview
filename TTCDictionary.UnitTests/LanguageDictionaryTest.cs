@@ -80,7 +80,6 @@ namespace TTCDictionary.UnitTests
         }
 
         [Test]
-        [Ignore("Ignore test")]
         public void When_checking_a_word_which_does_not_exist_should_return_false()
         {
             // Arrange.
