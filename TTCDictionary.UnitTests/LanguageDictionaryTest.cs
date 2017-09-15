@@ -105,5 +105,15 @@ namespace TTCDictionary.UnitTests
             // Assert.
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void When_checking_a_word_which_null_language_should_return_false()
+        {
+            // Act.
+            var result = this.SUT.Check(null, "test");
+
+            // Assert.
+            Assert.False(result);
+        }
     }
 }
