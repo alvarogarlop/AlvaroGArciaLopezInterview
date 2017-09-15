@@ -69,6 +69,20 @@ namespace TTCDictionary.UnitTests
         }
 
         [Test]
+        public void When_adding_a_word_for_a_language_which_does_exist_should_return_false()
+        {
+            // Arrange.
+            var word = "test";
+            this.SUT.Add("English", word);
+
+            // Act.
+            var result = this.SUT.Add("English", "test2");
+
+            // Assert.
+            Assert.IsFalse(result);
+        }
+
+        [Test]
         [Ignore("Ignore test")]
         public void When_checking_a_word_which_does_not_exist_should_return_false()
         {
