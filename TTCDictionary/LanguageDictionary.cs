@@ -19,7 +19,7 @@ namespace TTCDictionary
         {
             string wordAlreadyInserted = string.Empty;
 
-            if (list.TryGetValue(language, out wordAlreadyInserted))
+            if (!string.IsNullOrEmpty(language) && list.TryGetValue(language, out wordAlreadyInserted))
             {
                 return wordAlreadyInserted.Equals(word);
             }
