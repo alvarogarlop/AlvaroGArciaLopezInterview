@@ -51,6 +51,11 @@ namespace TTCDictionary
             return true;
         }
 
+        /// <summary>
+        /// Finds words in all languages that start with the `word`.
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
         public IEnumerable<string> Search(string word)
         {
             List<string> wordsFound = new List<string>();
