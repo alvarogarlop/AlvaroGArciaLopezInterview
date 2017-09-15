@@ -53,7 +53,7 @@ namespace TTCDictionary
 
         public IEnumerable<string> Search(string word)
         {
-            return list.Where(i => i.Value.StartsWith(word)).Select(i => i.Value);
+            return string.IsNullOrEmpty(word) ? new List<string>() : list.Where(i => i.Value.StartsWith(word)).Select(i => i.Value);
         }
     }
 }
