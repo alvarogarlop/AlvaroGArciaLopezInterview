@@ -28,7 +28,7 @@ namespace TTCDictionary
         /// <returns>True if the language and word were successfully added</returns>
         public bool Add(string language, string word)
         {
-            if (list.Any(i => i.Key.Equals(language)))
+            if (string.IsNullOrEmpty(language) || list.Any(i => i.Key.Equals(language)))
             {
                 return false;
             }
