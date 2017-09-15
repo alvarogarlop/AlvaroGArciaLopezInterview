@@ -15,6 +15,12 @@ namespace TTCDictionary
             this.list = list;
         }
 
+        /// <summary>
+        /// Determines if `word` is in the dictionary for `language`
+        /// </summary>
+        /// <param name="language"></param>
+        /// <param name="word"></param>
+        /// <returns>If it is, it returns `true`, if it's not, it will return `false`.</returns>
         public bool Check(string language, string word)
         {
             string wordAlreadyInserted = string.Empty;
