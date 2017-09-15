@@ -17,6 +17,13 @@ namespace TTCDictionary
 
         public bool Check(string language, string word)
         {
+            string wordAlreadyInserted = string.Empty;
+
+            if (list.TryGetValue(language, out wordAlreadyInserted))
+            {
+                return wordAlreadyInserted.Equals(word);
+            }
+
             return false;
         }
 
