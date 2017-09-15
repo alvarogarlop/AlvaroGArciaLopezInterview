@@ -20,6 +20,12 @@ namespace TTCDictionary
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Adds a language and a word to the dictionary. It is not possible to have more than one word per dictionary
+        /// </summary>
+        /// <param name="language"></param>
+        /// <param name="word"></param>
+        /// <returns>True if the language and word were successfully added</returns>
         public bool Add(string language, string word)
         {
             if (list.Any(i => i.Key.Equals(language)))
