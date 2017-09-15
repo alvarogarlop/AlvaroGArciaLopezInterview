@@ -22,7 +22,7 @@ namespace TTCDictionary
 
         public bool Add(string language, string word)
         {
-            if (list.Any(i => i.Key.Equals(language) || (i.Key.Equals(language) && i.Value.Equals(word))))
+            if (list.Any(i => i.Key.Equals(language)))
             {
                 return false;
             }
