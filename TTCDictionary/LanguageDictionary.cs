@@ -17,7 +17,7 @@ namespace TTCDictionary
 
         public bool Check(string language, string word)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         /// <summary>
