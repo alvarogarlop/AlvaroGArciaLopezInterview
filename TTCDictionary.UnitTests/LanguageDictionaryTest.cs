@@ -130,5 +130,20 @@ namespace TTCDictionary.UnitTests
             // Assert.
             Assert.AreEqual(3, result.Count());
         }
+
+        [Test]
+        public void When_searching_words_that_starts_with_test_should_return_an_empty_list()
+        {
+            // Arrange.
+            this.SUT.Add("English", "est1");
+            this.SUT.Add("German", "est2");
+            this.SUT.Add("Spanish", "est3");
+
+            // Act.
+            var result = this.SUT.Search("test");
+
+            // Assert.
+            Assert.AreEqual(0, result.Count());
+        }
     }
 }
