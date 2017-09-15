@@ -41,20 +41,6 @@ namespace TTCDictionary.UnitTests
         }
 
         [Test]
-        public void When_adding_a_word_which_does_exist_should_return_false()
-        {
-            // Arrange.
-            var word = "test";
-            this.SUT.Add("English", word);
-
-            // Act.
-            var result = this.SUT.Add("English", word);
-
-            // Assert.
-            Assert.IsFalse(result);
-        }
-
-        [Test]
         public void When_adding_a_word_which_does_exist_but_in_a_different_language_should_return_true()
         {
             // Arrange.
